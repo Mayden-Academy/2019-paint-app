@@ -17,8 +17,10 @@ window.addEventListener('load', function () {
         mouseIsPressed = true
         var box = e.target
         if (mouseIsPressed) {
+            e.preventDefault()
             box.style.backgroundColor = paintColor
         }
+
         canvas.addEventListener('mousemove', function (e) {
             var box = e.target
             if (mouseIsPressed) {
@@ -26,8 +28,11 @@ window.addEventListener('load', function () {
             }
         })
     })
+    
     canvas.addEventListener('mouseup', function () {
         mouseIsPressed = false
     })
+
+
     createGrid()
 })
