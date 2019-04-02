@@ -102,10 +102,21 @@ aside div {
     background-color: #b2b2b2;
     background-image: url("../IMG/eraserBlack.png");
     border: 4px solid #b2b2b2;
-    box-shadow: 0 0 10px 10px rgba(178,178,178, 0.3);
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+    box-shadow: 0 0 10px 10px rgba(178, 178, 178, 0.3);
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
     cursor: pointer;
+}
+
+main:hover {
+    cursor: crosshair;
+}
+
+.paintable {
+    width: 5px;
+    height: 5px;
+    float: left;
+    background-color: #111010;
 }
