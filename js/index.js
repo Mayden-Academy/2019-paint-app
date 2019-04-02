@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
             }
         })
     })
-    canvas.addEventListener('mouseup', function () {
+    window.addEventListener('mouseup', function () {
         mouseIsPressed = false
     })
     createGrid()
