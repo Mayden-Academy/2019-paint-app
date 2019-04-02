@@ -1,6 +1,7 @@
 window.addEventListener('load', function () {
 
     var canvas = document.querySelector('main')
+
     function createGrid() {
 
         for(var i = 0; i < 19200; i++ ) {
@@ -9,6 +10,5 @@ window.addEventListener('load', function () {
             div.classList.add('paintable')
         }
     }
-
     createGrid()
 })
