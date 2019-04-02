@@ -44,3 +44,15 @@ main {
     background-color: #111010;
     box-shadow: inset 0 0 9px 12px rgba(113,34,250,0.3), 0 0 9px 12px rgba(113,34,250,0.3);
 }
+
+main:hover {
+    cursor: crosshair;
+}
+
+.paintable {
+    width: 5px;
+    height: 5px;
+    float: left;
+    background-color: #111010;
+
+}
