@@ -1,6 +1,8 @@
 window.addEventListener('load', function () {
 
     var canvas = document.querySelector('main')
+    var paintColor = '#FFFFFF'
+    var mouseIsPressed = false
 
     function createGrid() {
 
@@ -10,5 +12,22 @@ window.addEventListener('load', function () {
             div.classList.add('paintable')
         }
     }
+
+    canvas.addEventListener('mousedown', function (e) {
+        mouseIsPressed = true
+        var box = e.target
+        if (mouseIsPressed) {
+            box.style.backgroundColor = paintColor
+        }
+        canvas.addEventListener('mousemove', function (e) {
+            var box = e.target
+            if (mouseIsPressed) {
+                box.style.backgroundColor = paintColor
+            }
+        })
+    })
+    canvas.addEventListener('mouseup', function () {
+        mouseIsPressed = false
+    })
     createGrid()
 })
