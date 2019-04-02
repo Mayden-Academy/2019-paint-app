@@ -48,3 +48,11 @@ main {
 main:hover {
     cursor: crosshair;
 }
+
+.paintable {
+    width: 5px;
+    height: 5px;
+    float: left;
+    background-color: #111010;
+
+}
