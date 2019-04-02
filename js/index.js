@@ -1,6 +1,7 @@
 var canvas = document.querySelector('main')
 var paintColor = '#FFFFFF'
 var mouseIsPressed = false
+var buttonArray = document.querySelectorAll('.button')
 
 function createGrid() {
     for(var i = 0; i < 18644; i++ ) {
