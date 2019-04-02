@@ -13,6 +13,10 @@ window.addEventListener('load', function () {
         }
     }
 
+    canvas.addEventListener('contextmenu', function () {
+        mouseIsPressed = false
+    })
+
     canvas.addEventListener('mousedown', function (e) {
         mouseIsPressed = true
         var box = e.target
@@ -32,7 +36,6 @@ window.addEventListener('load', function () {
     window.addEventListener('mouseup', function () {
         mouseIsPressed = false
     })
-
 
     createGrid()
 })
