@@ -76,4 +76,8 @@ buttonArray.forEach(function (button) {
     })
 })
 
+function setDivBackground (button, color){
+    button.style.backgroundColor = color
+}
+
 createGrid()
