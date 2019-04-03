@@ -18,6 +18,10 @@ function setToInactive() {
     })
 }
 
+function setPaintColor(color) {
+    paintColor = color
+}
+
  canvas.addEventListener('contextmenu', function () {
      mouseIsPressed = false
  })
@@ -39,4 +43,14 @@ canvas.addEventListener('mousedown', function (e) {
 window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
+
+buttonArray.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+        var buttonClick = e.target
+        var color = buttonClick.getAttribute('data-color')
+        setToInactive()
+        setPaintColor(color)
+    })
+})
+
 createGrid()
