@@ -93,81 +93,86 @@ aside div {
 .orange {
     border-color: #FF6037;
     background-image: url("../IMG/brushOrange.png");
+    box-shadow: 0 0 5px 5px rgba(255,96,55, 0.3), inset 0 0 5px 5px rgba(255,96,55, 0.3);
 }
 
 .orange:hover {
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+    box-shadow: 0 0 10px 10px rgba(255,96,55, 0.3), inset 0 0 5px 5px rgba(255,96,55, 0.6)
 }
 
 .orange-active {
     background-color: #FF6037;
     background-image: url("../IMG/brushBlack.png");
     border: 4px solid #FF6037;
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 10px 10px rgba(255,96,55, 0.3);
 }
 
 .yellow {
     border-color: #FFFF66;
     background-image: url("../IMG/brushYellow.png");
+    box-shadow: 0 0 5px 5px rgba(255,255,102, 0.3), inset 0 0 5px 5px rgba(255,255,102, 0.3);
 }
 
 .yellow:hover {
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+    box-shadow: 0 0 10px 10px rgba(255,255,102, 0.3), inset 0 0 5px 5px rgba(255,255,102, 0.6)
 }
 
 .yellow-active {
     background-color: #FFFF66;
     background-image: url("../IMG/brushBlack.png");
     border: 4px solid #FFFF66;
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 10px 10px rgba(255,255,102, 0.3);
 }
 
 .green {
     border-color: #66FF66;
     background-image: url("../IMG/brushGreen.png");
+    box-shadow: 0 0 5px 5px rgba(102,255,102, 0.3), inset 0 0 5px 5px rgba(102,255,102, 0.3);
 }
 
 .green:hover {
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+    box-shadow: 0 0 10px 10px rgba(102,255,102, 0.3), inset 0 0 5px 5px rgba(102,255,102, 0.6)
 }
 
 .green-active {
     background-color: #66FF66;
     background-image: url("../IMG/brushBlack.png");
     border: 4px solid #66FF66;
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 10px 10px rgba(102,255,102, 0.3);
 }
 
 .blue {
     border-color: #50BFE6;
     background-image: url("../IMG/brushBlue.png");
+    box-shadow: 0 0 5px 5px rgba(80,191,230, 0.3), inset 0 0 5px 5px rgba(80,191,230, 0.3);
 }
 
 .blue:hover {
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+    box-shadow: 0 0 10px 10px rgba(80,191,230, 0.3), inset 0 0 5px 5px rgba(80,191,230, 0.6)
 }
 
 .blue-active {
     background-color: #50BFE6;
     background-image: url("../IMG/brushBlack.png");
     border: 4px solid #50BFE6;
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 10px 10px rgba(80,191,230, 0.3);
 }
 
 .pink {
     border-color: #FF00CC;
     background-image: url("../IMG/brushPink.png");
+    box-shadow: 0 0 5px 5px rgba(255,0, 204, 0.3), inset 0 0 5px 5px rgba(255,0, 204, 0.3);
 }
 
 .pink:hover {
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+    box-shadow: 0 0 10px 10px rgba(255,0, 204, 0.3), inset 0 0 5px 5px rgba(255,0, 204, 0.6)
 }
 
 .pink-active {
     background-color: #FF00CC;
     background-image: url("../IMG/brushBlack.png");
     border: 4px solid #FF00CC;
-    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 10px 10px rgba(255,0, 204, 0.3);
 }
 
 main:hover {
