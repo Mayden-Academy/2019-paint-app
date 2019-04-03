@@ -1,3 +1,15 @@
+// IE10 Fixes
+
+// Included polyfill to allow forEach loop to work in IE10
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function(callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
+//  The good stuff from here on down!!!
 var canvas = document.querySelector('main')
 var paintColor = '#FFFFFF'
 var mouseIsPressed = false
@@ -30,15 +42,6 @@ function setToInactive() {
 
 function setPaintColor(color) {
     paintColor = color
-}
-
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function(callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
 }
 
 canvas.addEventListener('mousedown', function (e) {
