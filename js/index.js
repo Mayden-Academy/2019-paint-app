@@ -14,20 +14,31 @@ function createGrid() {
 function setActive(button) {
     var buttonColorClass = button.id
     var buttonColorClassActive = buttonColorClass + '-active'
-    if (!buttonColorClass.includes('-active')) {
-        button.classList.replace(buttonColorClass, buttonColorClassActive)
+    if (!buttonColorClass.indexOf('-active') > -1) {
+        button.classList.remove(buttonColorClass)
+        button.classList.add(buttonColorClassActive)
     }
 }
 
 function setToInactive() {
     buttonArray.forEach(function (currentColor) {
         currentColor.className = ''
-        currentColor.classList.add('button', currentColor.id);
+        currentColor.classList.add(currentColor.id)
+        currentColor.classList.add('button')
     })
 }
 
 function setPaintColor(color) {
     paintColor = color
+}
+
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function(callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
 }
 
 canvas.addEventListener('mousedown', function (e) {
