@@ -2,7 +2,7 @@ var canvas = document.querySelector('main')
 var paintColor = '#FFFFFF'
 var mouseIsPressed = false
 var buttonArray = document.querySelectorAll('.button')
-console.log(buttonArray)
+
 function createGrid() {
     for(var i = 0; i < 18644; i++ ) {
         newDiv = document.createElement('div')
@@ -11,17 +11,24 @@ function createGrid() {
     }
 }
 
-function setActive(button){
+function setActive(button) {
     var buttonColorClass = button.id
     var buttonColorClassActive = buttonColorClass + '-active'
-    if(!buttonColorClass.includes('-active')){
+    if (!buttonColorClass.includes('-active')) {
         button.classList.replace(buttonColorClass, buttonColorClassActive)
     }
 }
 
- canvas.addEventListener('contextmenu', function () {
-     mouseIsPressed = false
- })
+function setToInactive() {
+    buttonArray.forEach(function (currentColor) {
+        currentColor.className = ''
+        currentColor.classList.add('button', currentColor.id);
+    })
+}
+
+function setPaintColor(color) {
+    paintColor = color
+}
 
 canvas.addEventListener('mousedown', function (e) {
     e.preventDefault()
@@ -40,18 +47,19 @@ canvas.addEventListener('mousedown', function (e) {
 window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
-createGrid()
 
-function setPaintColor(color) {
-    paintColor = color
-}
+canvas.addEventListener('contextmenu', function () {
+    mouseIsPressed = false
+})
 
 buttonArray.forEach(function (button) {
     button.addEventListener('click', function (e) {
         var buttonClick = e.target
         var color = buttonClick.getAttribute('data-color')
+        setToInactive()
         setActive(buttonClick)
         setPaintColor(color)
     })
 })
 
+createGrid()
