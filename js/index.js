@@ -33,3 +33,9 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 createGrid()
+
+var color = document.getElementById('eraser').getAttribute('data-color')
+
+function setPaintColor(color) {
+    paintColor = color
+}
