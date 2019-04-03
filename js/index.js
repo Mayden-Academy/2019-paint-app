@@ -11,6 +11,13 @@ function createGrid() {
     }
 }
 
+function setToInactive() {
+    buttonArray.forEach(function (currentColor) {
+        currentColor.className = ''
+        currentColor.classList.add('button', currentColor.id);
+    })
+}
+
  canvas.addEventListener('contextmenu', function () {
      mouseIsPressed = false
  })
@@ -33,3 +40,5 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 createGrid()
+
+setToInactive()
