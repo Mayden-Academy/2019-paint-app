@@ -2,7 +2,7 @@ var canvas = document.querySelector('main')
 var paintColor = '#FFFFFF'
 var mouseIsPressed = false
 var buttonArray = document.querySelectorAll('.button')
-
+console.log(buttonArray)
 function createGrid() {
     for(var i = 0; i < 18644; i++ ) {
         newDiv = document.createElement('div')
@@ -33,3 +33,11 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 createGrid()
+
+buttonArray.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+        var buttonClick = e.target
+
+    })
+})
+
