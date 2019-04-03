@@ -11,6 +11,14 @@ function createGrid() {
     }
 }
 
+function setActive(button){
+    var buttonColorClass = button.id
+    var buttonColorClassActive = buttonColorClass + '-active'
+    if(!buttonColorClass.includes('-active')){
+        button.classList.replace(buttonColorClass, buttonColorClassActive)
+    }
+}
+
  canvas.addEventListener('contextmenu', function () {
      mouseIsPressed = false
  })
@@ -42,6 +50,7 @@ buttonArray.forEach(function (button) {
     button.addEventListener('click', function (e) {
         var buttonClick = e.target
         var color = buttonClick.getAttribute('data-color')
+        setActive(buttonClick)
         setPaintColor(color)
     })
 })
