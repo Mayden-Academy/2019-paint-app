@@ -33,3 +33,9 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 createGrid()
+
+var color = buttonClick.getAttribute('data-color')
+
+function setPaintColor(color) {
+    paintColor = color
+}
