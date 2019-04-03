@@ -40,5 +40,3 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 createGrid()
-
-setToInactive()
