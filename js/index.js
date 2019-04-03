@@ -11,6 +11,14 @@ function createGrid() {
     }
 }
 
+function setActive(button) {
+    var buttonColorClass = button.id
+    var buttonColorClassActive = buttonColorClass + '-active'
+    if (!buttonColorClass.includes('-active')) {
+        button.classList.replace(buttonColorClass, buttonColorClassActive)
+    }
+}
+
 function setToInactive() {
     buttonArray.forEach(function (currentColor) {
         currentColor.className = ''
@@ -21,10 +29,6 @@ function setToInactive() {
 function setPaintColor(color) {
     paintColor = color
 }
-
- canvas.addEventListener('contextmenu', function () {
-     mouseIsPressed = false
- })
 
 canvas.addEventListener('mousedown', function (e) {
     e.preventDefault()
@@ -44,11 +48,16 @@ window.addEventListener('mouseup', function () {
     mouseIsPressed = false
 })
 
+canvas.addEventListener('contextmenu', function () {
+    mouseIsPressed = false
+})
+
 buttonArray.forEach(function (button) {
     button.addEventListener('click', function (e) {
         var buttonClick = e.target
         var color = buttonClick.getAttribute('data-color')
         setToInactive()
+        setActive(buttonClick)
         setPaintColor(color)
     })
 })
