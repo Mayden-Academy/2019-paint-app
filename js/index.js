@@ -70,10 +70,14 @@ canvas.addEventListener('contextmenu', function () {
 buttonArray.forEach(function (button) {
     button.addEventListener('click', function (e) {
         var buttonClick = e.target
-        var color = buttonClick.getAttribute('data-color')
         setToInactive()
+        if (e.target.tagName == 'BUTTON') {
+            buttonClick = document.querySelector('.jsPicker')
+        } else {
+            var color = buttonClick.getAttribute('data-color')
+            setPaintColor(color)
+        }
         setActive(buttonClick)
-        setPaintColor(color)
     })
 })
 
