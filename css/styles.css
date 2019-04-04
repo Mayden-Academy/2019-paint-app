@@ -46,11 +46,11 @@ main {
 }
 
 aside div {
-    width: 70px;
-    height: 70px;
+    width: 63px;
+    height: 63px;
     border: 8px solid white;
     border-radius: 40px;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 10px auto;
     background-size: cover;
 }
 
