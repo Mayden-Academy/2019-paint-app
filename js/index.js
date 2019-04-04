@@ -84,7 +84,6 @@ buttonArray.forEach(function (button) {
 
 document.addEventListener('click', function () {
     var color = '#' + colorPicker.textContent
-    var buttonClick = document.getElementById('jsPicker')
     var rgb = colorPicker.style.backgroundColor.split(")")[0]
     setDivBackground(buttonClick, color, rgb)
 
