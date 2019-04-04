@@ -82,7 +82,6 @@ buttonArray.forEach(function (button) {
     })
 })
 
-
 document.addEventListener('click', function () {
     var color = '#' + colorPicker.textContent
     var buttonClick = document.getElementById('jsPicker')
@@ -97,13 +96,12 @@ document.addEventListener('click', function () {
         buttonClick.style.backgroundColor = '#262121'
         buttonClick.style.boxShadow = "0 0 5px 5px "+ rgb +", 0.3), inset 0 0 5px 5px " + rgb + ", 0.3)"
     }
-
 })
 
-function setDivBackground (button, color, rgb){
+function setDivBackground (button, color, rgb) {
     button.style.backgroundColor = color
     button.style.borderColor = color
-    button.style.boxShadow = "0 0 5px 5px "+ rgb +", 0.3)"
+    button.style.boxShadow = "0 0 5px 5px " + rgb + ", 0.3)"
 }
 
 createGrid()
