@@ -15,6 +15,7 @@ var paintColor = '#FFFFFF'
 var mouseIsPressed = false
 var buttonArray = document.querySelectorAll('.button')
 var colorPicker = document.querySelector('.jscolor')
+var buttonClick = document.getElementById('jsPicker')
 
 function createGrid() {
     for(var i = 0; i < 18644; i++ ) {
@@ -82,9 +83,24 @@ buttonArray.forEach(function (button) {
 })
 
 document.addEventListener('click', function () {
+    var color = '#' + colorPicker.textContent
+    var rgb = colorPicker.style.backgroundColor.split(")")[0]
+    setDivBackground(buttonClick, color, rgb)
+
     if (colorPicker.classList.contains('jscolor-active')) {
-        paintColor = "#" + colorPicker.textContent
+        paintColor = color
+    }
+
+    if (buttonClick.classList.contains('jsPicker')){
+        buttonClick.style.backgroundColor = '#262121'
+        buttonClick.style.boxShadow = "0 0 5px 5px "+ rgb +", 0.3), inset 0 0 5px 5px " + rgb + ", 0.3)"
     }
 })
+
+function setDivBackground (button, color, rgb) {
+    button.style.backgroundColor = color
+    button.style.borderColor = color
+    button.style.boxShadow = "0 0 5px 5px " + rgb + ", 0.3)"
+}
 
 createGrid()
