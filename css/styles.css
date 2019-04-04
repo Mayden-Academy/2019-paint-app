@@ -46,11 +46,11 @@ main {
 }
 
 aside div {
-    width: 70px;
-    height: 70px;
+    width: 63px;
+    height: 63px;
     border: 8px solid white;
     border-radius: 40px;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 10px auto;
     background-size: cover;
 }
 
@@ -175,6 +175,22 @@ aside div {
     box-shadow: 0 0 10px 10px rgba(255,0, 204, 0.3);
 }
 
+.jsPicker {
+    background-image: url("../IMG/paletteWhite.png");
+    box-shadow: 0 0 5px 5px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.3);
+}
+
+.jsPicker:hover {
+    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3), inset 0 0 5px 5px rgba(255,255,255, 0.6)
+}
+
+.jsPicker-active {
+    background-color: #FFFFFF;
+    background-image: url("../IMG/paletteBlack.png");
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 0 10px 10px rgba(255,255,255, 0.3);
+}
+
 main:hover {
     cursor: crosshair;
 }
@@ -192,4 +208,14 @@ main:hover {
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
+}
+
+button {
+    position: absolute;
+    left: 269px;
+    top: 566px;
+    width: 63px;
+    height: 63px;
+    border-radius: 40px;
+    opacity: 0;
 }
