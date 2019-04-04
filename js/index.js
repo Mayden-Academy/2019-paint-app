@@ -14,6 +14,7 @@ var canvas = document.querySelector('main')
 var paintColor = '#FFFFFF'
 var mouseIsPressed = false
 var buttonArray = document.querySelectorAll('.button')
+var colorPicker = document.querySelector('.jscolor')
 
 function createGrid() {
     for(var i = 0; i < 18644; i++ ) {
@@ -74,6 +75,12 @@ buttonArray.forEach(function (button) {
         setActive(buttonClick)
         setPaintColor(color)
     })
+})
+
+document.addEventListener('click', function () {
+    if (colorPicker.classList.contains('jscolor-active')) {
+        paintColor = "#" + colorPicker.textContent
+    }
 })
 
 createGrid()
